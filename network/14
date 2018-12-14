@@ -1,0 +1,4 @@
+# file working like a DNS
+# mapping a 'name' to an adress
+
+/etc/hosts
