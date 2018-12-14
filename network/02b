@@ -1,0 +1,9 @@
+# ping on broadcast adress then use arp -a
+# at 42, we can ping to 10.11.255.255,
+# 10.12.255.255 and 10.13.255.255
+{
+	ping -c 2 10.11.255.255
+	ping -c 2 10.12.255.255
+	ping -c 2 10.13.255.255
+} &> /dev/null
+arp -a | grep ".42.fr" | cut -d " " -f 2

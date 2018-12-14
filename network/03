@@ -1,0 +1,4 @@
+# networksetup -listallhardwareports
+# shows all the hardware interface name
+# here en1 is for wifi interface
+ifconfig en1 | grep ether | cut -d " " -f 2
