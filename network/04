@@ -1,0 +1,11 @@
+# methode 1
+# will display the route for the destination: default
+route -n get default | grep gateway
+
+echo "methode 2"
+# methode 2 also gives gateway for ipv6
+netstat -rn | grep default | tr -s " " | cut -d " " -f 2
+
+echo "methode 2 bis"
+# Or just gateway for ipv4
+netstat -rn | head | grep default | tr -s " " |  cut -d " " -f 2
