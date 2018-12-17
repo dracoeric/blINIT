@@ -1,0 +1,11 @@
+while [ ! $(pgrep $1) ]
+do
+	echo "$1 not found"
+	sleep 1
+done
+
+while [ $(pgrep $1) ]
+do
+		leaks $1 | grep leaked
+		sleep 1
+done

@@ -1,0 +1,2 @@
+sudo killall -u USERNAME
+sudo userdel USERNAME
