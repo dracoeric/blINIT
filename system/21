@@ -1,0 +1,7 @@
+# all real users have are listed in /etc/passwd
+# with an uid between UID_MIN and UIDMAX
+# these are written in /etc/login.defs
+# on our VM they are set to 1000 and 60000
+# we then use awk to limit printing to valid UID
+
+awk -F ':' '{if ($3 >= 1000 && $3 <= 60000) print $1}' /etc/passwd

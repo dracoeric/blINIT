@@ -1,0 +1,9 @@
+# to kill the most recent process
+sudo kill $!
+# or
+# to kill a process with a PID (Obtained with jobs -l)
+sudo kill PID
+# to kill all names process
+sudo killall PROCESS_NAME
+# to kill all process
+sudo kill $(jobs -p)
